@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.example.passkey_manager"
-    compileSdk = 34
+    compileSdk = 36  // Змініть з 34 на 36
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
@@ -22,8 +22,8 @@ android {
     defaultConfig {
         applicationId = "com.example.passkey_manager"
         minSdk = flutter.minSdkVersion
-        targetSdk = 34
-        versionCode = flutter.versionCode.toInt()  // Змініть toInteger() на toInt()
+        targetSdk = 36  // Змініть з 34 на 36
+        versionCode = flutter.versionCode.toInt()
         versionName = flutter.versionName
     }
 
@@ -36,4 +36,11 @@ android {
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    implementation("androidx.credentials:credentials:1.3.0")
+    implementation("androidx.credentials:credentials-play-services-auth:1.3.0")
+    implementation("androidx.biometric:biometric:1.2.0-alpha05")
+    implementation("androidx.security:security-crypto:1.1.0-alpha06")
 }
